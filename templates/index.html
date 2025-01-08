@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미세먼지 예측</title>
+
+<style>
+    /* 전체 페이지 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+/* 폼 스타일 */
+form {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* 결과 페이지 스타일 */
+.result-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-container p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.result-container a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.result-container a:hover {
+    background-color: #45a049;
+}
+
+</style>
+</head>
+<body>
+    <h1>대기 오염 물질 농도 입력</h1>
+    <form action="/predict" method="POST">
+        <label for="pm25">초미세먼지 PM2.5 (㎍/m³):</label>
+        <input type="text" name="pm25" required><br><br>
+
+        <label for="o3">오존 O3 (ppm):</label>
+        <input type="text" name="o3" required><br><br>
+
+        <label for="no2">이산화질소 NO2 (ppm):</label>
+        <input type="text" name="no2" required><br><br>
+
+        <label for="co">일산화탄소 CO (ppm):</label>
+        <input type="text" name="co" required><br><br>
+
+        <label for="so2">아황산가스 SO2 (ppm):</label>
+        <input type="text" name="so2" required><br><br>
+
+        <input type="submit" value="예측하기">
+    </form>
+</body>
+</html>
