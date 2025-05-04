@@ -6,7 +6,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # 모델 로드
-model = joblib.load('model.pkl')  # 모델을 'model.pkl'에서 로드
+model = joblib.load('model/model.pkl')  # 모델을 'model.pkl'에서 로드
 
 # 홈 페이지 라우트
 @app.route('/')
